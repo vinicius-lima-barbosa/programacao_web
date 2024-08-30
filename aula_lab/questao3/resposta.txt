@@ -1,0 +1,3 @@
+Quando usar grid?
+
+-> Como o nome deixa claro, os melhores casos pra utilizar grid seria quando houvesse uma grade de items complexa no código.
