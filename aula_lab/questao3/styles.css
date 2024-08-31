@@ -15,15 +15,15 @@ body {
 
 .main-container {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
-    justify-content: space-around;
+    grid-template-columns: 20em 2fr 20em;
+    gap: 30px;
     width: 100%;
+    margin: 0px 20px 0px 20px;
 }
 
 .left-bar,
 .right-bar,
 main {
-    display: inline;
     text-align: justify;
     border: 1px solid;
     border-radius: 5px;
