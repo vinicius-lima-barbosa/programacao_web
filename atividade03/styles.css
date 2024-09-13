@@ -1,0 +1,49 @@
+* {
+    font-family: Open Sans;
+    margin: 0px;
+    padding: 0px;    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 500px;
+    margin: 0 auto;
+    background-image: linear-gradient(120deg, #0758a9, #1caeb6);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1,
+.consulta-area,
+h3 {
+    margin: 10px;
+}
+
+.input-area,
+.button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition:all;
+}
+
+.input-area {
+    outline: none;
+}
+
+.button:hover {
+    background-color: rgb(180, 177, 177);
+    cursor: pointer;
+}
+
+.resultados {
+    text-align: justify;
+}
+
+.content {
+    color: white;
+}
