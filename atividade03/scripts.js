@@ -3,7 +3,6 @@ const result = document.querySelector('.resultados');
 
 button.addEventListener('click', async () => {
     const cep = document.querySelector('.input-area').value;
-
     if (cep.length !== 8 || isNaN(cep)) { alert('Requisiçao invalida'); return; }
 
     try {

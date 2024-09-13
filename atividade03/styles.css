@@ -36,7 +36,8 @@ h3 {
 }
 
 .button:hover {
-    background-color: rgb(180, 177, 177);
+    transition: .5s;
+    opacity: 80%;
     cursor: pointer;
 }
 
