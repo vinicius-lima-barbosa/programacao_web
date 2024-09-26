@@ -1,12 +1,40 @@
 import "./Counter.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 function Counter() {
+  const [value, setValue] = useState(0);
+  const [running, setRunning] = useState(true);
+
+  useEffect(() => {
+    let interval;
+
+    if (running) {
+      interval = setInterval(() => {
+        setValue((value) => value + 1);
+      }, 1000);
+    }
+
+    return () => clearInterval(interval);
+  }, [running]);
+
+  const stopCounter = () => {
+    setRunning(!running);
+  };
+
   return (
     <div className="container">
-      <h2 className="title">Counter</h2>
-      <p className="value">0</p>
-      <button className="stop-button">Stop</button>
+      <h1 className="title">Counter</h1>
+      <p className="value">{value}</p>
+      {running && (
+        <button className="stop-button" onClick={stopCounter}>
+          Stop
+        </button>
+      )}
+      {!running && (
+        <button className="stop-button" onClick={stopCounter}>
+          Restart
+        </button>
+      )}
     </div>
   );
 }

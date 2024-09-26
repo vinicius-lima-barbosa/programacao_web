@@ -37,13 +37,14 @@
   border: none;
   border-radius: 5px;
   margin-bottom: 15px;
-  background-color: black;
+  background-color: rgb(228, 56, 56);
   color: white;
+  font-size: large;
   transition: .6s;
 }
 
 .stop-button:hover {
   outline: none;
   cursor: pointer;
-  background-color: rgb(32, 54, 32);
+  background-color: rgb(123, 23, 23);
 }
