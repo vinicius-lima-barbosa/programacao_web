@@ -25,16 +25,9 @@ function Counter() {
     <div className="container">
       <h1 className="title">Counter</h1>
       <p className="value">{value}</p>
-      {running && (
-        <button className="stop-button" onClick={stopCounter}>
-          Stop
-        </button>
-      )}
-      {!running && (
-        <button className="stop-button" onClick={stopCounter}>
-          Restart
-        </button>
-      )}
+      <button className="stop-button" onClick={stopCounter}>
+        {running ? "Stop" : "Restart"}
+      </button>
     </div>
   );
 }
