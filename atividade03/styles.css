@@ -4,6 +4,13 @@
     padding: 0px;    
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .container {
     display: flex;
     flex-direction: column;
