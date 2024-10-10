@@ -60,7 +60,7 @@ app.put("/animes/:id", (req, res) => {
 
 app.delete("/animes/:id", (req, res) => {
   const { id } = req.params;
-  const anime = animes.find((anime) => anime.id === Number(id));
+  const anime = animes.find((anime) => anime.id === parseInt(id));
 
   if (!anime) {
     return res.status(404).json({ message: "Anime not found!" });
