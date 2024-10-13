@@ -12,7 +12,7 @@ app.get("/animes", (req, res) => {
 
 app.get("/animes/:id", (req, res) => {
   const { id } = req.params;
-  const anime = animes.find((anime) => anime.id === parseInt(id));
+  const anime = animes.find((anime) => anime.id === id);
 
   if (!anime) {
     return res.status(404).json({ message: "Anime not found!" });
