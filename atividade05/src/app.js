@@ -1,4 +1,5 @@
 import express from "express";
+import { randomUUID } from "crypto";
 
 const app = express();
 app.use(express.json());
@@ -28,7 +29,7 @@ app.post("/animes", (req, res) => {
   }
 
   const newAnime = {
-    id: animes.length + 1,
+    id: randomUUID(),
     name,
     genre,
     studio,
@@ -42,7 +43,7 @@ app.put("/animes/:id", (req, res) => {
   const { id } = req.params;
   const { name, genre, studio } = req.body;
 
-  const anime = animes.find((anime) => anime.id === parseInt(id));
+  const anime = animes.find((anime) => anime.id === id);
 
   if (!anime) {
     return res.status(404).json({ message: "Anime not found!" });
@@ -60,7 +61,7 @@ app.put("/animes/:id", (req, res) => {
 
 app.delete("/animes/:id", (req, res) => {
   const { id } = req.params;
-  const anime = animes.find((anime) => anime.id === parseInt(id));
+  const anime = animes.find((anime) => anime.id === id);
 
   if (!anime) {
     return res.status(404).json({ message: "Anime not found!" });
